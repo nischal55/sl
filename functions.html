@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions | JS</title>
+  </head>
+  <body>
+    <script>
+      const places = ["Kathmandu", "lalitpur", "Bhaktapur"];
+      const checkPlace = (place) => {
+        let status = false;
+        for (let i = 0; i < places.length; i++) {
+          if (places[i] == place) {
+            status = true;
+            break;
+          }
+        }
+        return status;
+      };
+      console.log(checkPlace("Kathmandu"));
+      if (checkPlace("lalitpur")) {
+        console.log("is available");
+      } else {
+        console.log("Not Available");
+      }
+
+      //functions without parameter
+      const grandTotal = () => {
+        let sum = 0;
+        const prices = [123, 342, 200, 500, 1234, 451];
+        for (let i = 0; i < prices.length; i++) {
+          sum += prices[i];
+        }
+        return sum;
+      };
+      console.log("Your total price is " + grandTotal());
+
+      // Function without parameter and return type
+      const showMessage = () => {
+        let message = "have a nice day";
+        console.log("Today'a MEssage " + message);
+      };
+      showMessage();
+
+      //function with parameter and without return type
+      const users = ["admin", "admin"];
+      const checkUser = (username, password) => {
+        if (username == users[0] && password == users[1]) {
+          console.log("login user");
+        } else {
+          console.log("login fail");
+        }
+      };
+      checkUser("admin", "admin");
+    </script>
+  </body>
+</html>

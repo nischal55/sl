@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="number" id="num1" placeholder="number_one" /><br /><br />
+    <input type="number" id="num2" placeholder="number_two" /><br /><br />
+
+    <button id="btnAdd" onclick="sum()">ADD</button><br /><br />
+    <button id="btnAdd" onclick="diff()">Sub</button><br /><br />
+    <p id="result"></p>
+
+    <script>
+      function sum() {
+        var number_one = document.getElementById("num1").value;
+        var number_two = document.getElementById("num2").value;
+
+        var result = parseInt(number_one) + parseInt(number_two);
+        document.getElementById("result").innerHTML = result;
+      }
+      function diff() {
+        var number_one = document.getElementById("num1").value;
+        var number_two = document.getElementById("num2").value;
+
+        var result = parseInt(number_one) - parseInt(number_two);
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

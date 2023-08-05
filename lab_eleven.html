@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //String Handling Function
+      /*
+      1. Length
+      2. slice
+      3. replace
+      4. toupperCase
+      5. toLowerCase
+      5. concat
+      6. trimStart
+      7. trimEnd
+      8. split
+
+      *search Function
+      1. indexof()
+      2. search()
+      3. match()
+      4. includes()
+      5. startsWith()
+      6. endsWith()
+      */
+
+      let address = "Kathmandu, Nepal";
+      console.log("Actual String: " + address);
+      console.log("String Length: " + address.length);
+      console.log("String slice: " + address.slice(3, 9));
+      console.log("Sub String " + address.substr(2, 5));
+      console.log("Substring : " + address.substring(2, 5));
+
+      let message = "happy Birthday";
+      console.log("Actual Message :" + message);
+      console.log("Lower case " + message.replace("Happy", "Happppy"));
+
+      let title = "Welcome to Dav College";
+      console.log("actual Title: " + title.toLowerCase());
+      console.log("Upper case: " + title.toUpperCase());
+
+      let first_name = "Madan";
+      let middle_name = "Krishna";
+      let last_name = "Shrestha";
+      let full_name = first_name.concat(last_name);
+      console.log("Full Name " + full_name);
+
+      let price = "      Rs.5000     ";
+      console.log("Actual Price : " + price);
+      console.log("After Trim: " + price.trim());
+      console.log("left Space Only: " + price.trimStart());
+      console.log("Right Space only: " + price.trimEnd());
+
+      //split() -> return data in array
+      let places = "Kathmandu,Pokhara,Butwal,Dharan,Lalitpur,Makwanpur";
+      console.log("places: " + places);
+      let result = places.split(",", 3);
+      console.log(result);
+      for (let i = 0; i < result.length; i++) {
+        console.log(result[i]);
+      }
+      //search Function
+      let random_quote = "success: it is the courage to continue that counts";
+      // indexOf() - return index of substring from the string
+      console.log("Index of:" + random_quote.indexOf("courage"));
+      //2. match() - check substring in string
+      console.log("Match regrex " + random_quote.match(/courage/));
+      console.log("Match: " + random_quote.match("courage"));
+      //3.search()
+      console.log("Search: " + random_quote.search("courage"));
+      //4. includes() - returns true if the substring exist in the string
+      console.log("Includes: " + random_quote.includes("courage")); //true
+      console.log("Includes: " + random_quote.includes("courages")); //false
+      //5. startsWith()-return true if the string starts with specific substring
+      let email = "contact@gmail.com";
+      console.log("StartsWith: " + email.startsWith("contact"));
+      //6. endsWith
+      console.log("EndsWith: " + email.endsWith("com.np"));
+    </script>
+  </body>
+</html>
